@@ -1,0 +1,84 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* 难度选择按钮布局 */
+.difficulty-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 通用按钮样式 */
+.difficulty-level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 100px;
+}
+
+/* 各难度级别颜色 */
+.a1 { background-color: #4a90e2; }
+.a2 { background-color: #63b7ff; }
+.b1 { background-color: #34c759; }
+.b2 { background-color: #6dd400; }
+.c1 { background-color: #ff9500; }
+.c2 { background-color: #ff3b30; }
+
+/* 悬停效果 */
+.difficulty-level:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        margin: 30px auto;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .difficulty-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .difficulty-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .difficulty-level {
+        font-size: 1em;
+        min-height: 80px;
+    }
+}
