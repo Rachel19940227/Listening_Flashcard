@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2真题练习</title>
+    <!-- 先加载Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="c1-style.css">
+</head>
+<body>
+    <!-- 返回按钮 -->
+    <a href="index.html" class="back-button">← 返回首页</a>
+
+    <div class="container">
+        <h2>C2 真题练习</h2>
+        
+        <!-- 卡片容器 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <div class="question-content" id="question-content">
+                        <!-- 题目内容动态加载 -->
+                    </div>
+                    <!-- 音频播放器 -->
+                    <audio id="audio-player" controls style="width: 100%; margin-top: 20px">
+                        <source id="audio-source" type="audio/mpeg">
+                        您的浏览器不支持音频播放
+                    </audio>
+                </div>
+                <div class="card-back">
+                    <div class="answer-content" id="answer-content">
+                        <!-- 答案内容动态加载 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 控制区域 -->
+        <div class="audio-controls">
+            <button class="nav-button prev-button">上一题</button>
+            <div class="progress-container">
+                <!-- 添加进度条和题号显示 -->
+                <input type="range" id="progress" min="1" value="1">
+                <div class="question-number" id="question-number">1/140</div>
+            </div>
+            <button class="nav-button next-button">下一题</button>
+        </div>
+
+        <!-- 转写文本区域 -->
+        <div class="transcript-control">
+            <button class="toggle-btn">显示转写文本</button>
+            <div class="transcript" id="transcript">
+                [音频转写文本加载中...]
+            </div>
+        </div>
+    </div>
+
+    <!-- 最后加载脚本 -->
+    <script src="c2-script.js"></script>
+</body>
+</html>
